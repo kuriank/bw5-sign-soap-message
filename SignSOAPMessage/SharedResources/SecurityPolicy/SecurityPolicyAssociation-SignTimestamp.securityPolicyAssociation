@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BWSharedResource xmlns:inLine="http://www.example.com/interface/books/GetBooksImpl/Service">
+    <name>SecurityPolicyAssociation-SignTimestamp</name>
+    <resourceType>ws.security.policy.association.resource</resourceType>
+    <config>
+        <applyTo>/Client/WSClient-SignTimestamp.process/SOAPRequestReply</applyTo>
+        <systemSecuritySubject>/Client/WSClient-SignTimestamp.process/SOAPEventSource/GetBooks</systemSecuritySubject>
+        <inbound>
+            <selectSignatureParts/>
+            <selectEncryptionParts/>
+        </inbound>
+        <outbound>
+            <selectSignatureParts>SOAP-ENV:Body and wsu:Timestamp</selectSignatureParts>
+            <selectEncryptionParts/>
+        </outbound>
+        <outboundMessagePolicy>/SharedResources/SecurityPolicy/SecurityPolicy-SignTimestamp.securityPolicy</outboundMessagePolicy>
+        <outboundTableOfPrefixNamespacePair>
+            <row>
+                <prefixForElements>SOAP-ENV</prefixForElements>
+                <namespaceForElements>http://schemas.xmlsoap.org/soap/envelope/</namespaceForElements>
+            </row>
+            <row>
+                <prefixForElements>wsu</prefixForElements>
+                <namespaceForElements>http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd</namespaceForElements>
+            </row>
+        </outboundTableOfPrefixNamespacePair>
+    </config>
+</BWSharedResource>
