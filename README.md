@@ -1,1 +1,2 @@
-# bw5-sign-soap-message
+# Signing WS-Security elements in a SOAP message in TIBCO ActiveMatrix BusinessWorks™ 5
+Project accompanying the article [Signing WS-Security elements in a SOAP message in TIBCO ActiveMatrix BusinessWorks™ 5](https://community.tibco.com/articles/tibco-activematrix-businessworks/signing-ws-security-elements-in-a-soap-message-in-tibco-activematrix-businessworks5/) in [TIBCO Community](https://community.tibco.com).
